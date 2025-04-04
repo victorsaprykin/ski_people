@@ -1,0 +1,115 @@
+.goods {
+  padding: 40px 0;
+
+   @media (min-width: 1024px) {
+      padding: 60px 0;
+    }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+      font-size: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 32px 8px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 32px 10px;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+      gap: 40px 16px;
+    }
+  }
+
+
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 19px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  &__favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    &:hover {
+      fill: var(--accent-color);
+      stroke: var(--accent-color);
+    }
+  }
+
+  &__good {
+    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    color: var(--text-color);
+
+   
+    @media (min-width: 768px) {
+      margin-bottom: 19px;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      font-size: 16px;
+
+         dt {
+     width: 185px;
+   }
+    }
+    
+    @media (min-width: 1024px) {
+      margin-bottom: 37px;
+      
+   
+    }
+  }
+
+  &__price {
+    font-size: 18px;
+    
+
+    @media (min-width: 768px) {
+      text-align: right;
+      font-size: 20px;
+      
+    }
+  }
+
+ 
+}

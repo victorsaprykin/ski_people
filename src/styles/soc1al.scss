@@ -1,0 +1,17 @@
+.soc1al {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+  }
+
+  &__link {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__icon {
+    fill: var(--white-color);
+    stroke: var(--white-color);
+  }
+}

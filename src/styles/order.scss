@@ -1,0 +1,101 @@
+.order {
+  padding: 32px 0 60px;
+
+  @media (min-width: 768px) {
+    padding: 60px 0 80px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 60px 0 100px;
+
+    @media (min-width: 1440px) {
+      padding: 60px 0;
+    }
+  }
+
+  &__inner {
+    padding: 24px 0 18px;
+    border: 1px solid #eeeff2;
+    border-radius: 16px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      padding: 24px 150px 18px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 60px 100px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 12px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    font-size: 16px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__number {
+    margin-bottom: 20px;
+    padding: 4px 8px;
+    display: inline-block;
+    background-color: var(--input-color);
+    border-radius: 32px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__data-title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__data-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    dt,
+    dd {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--input-color);
+    }
+
+    dt {
+      color: var(--placeholder-color);
+    }
+
+    dd {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.product {
+  padding: 24px 0 60px;
+
+  @media (min-width: 768px) {
+    padding: 24px 0 80px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 40px 0 100px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @media (min-width: 768px) {
+      row-gap: 40px;
+    }
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 620px 1fr;
+      column-gap: 16px;
+    }
+
+    @media (min-width: 1440px) {
+      display: grid;
+      grid-template-columns: 832px 1fr;
+      column-gap: 16px;
+    }
+  }
+
+  &__slider {
+    max-width: 710px;
+
+    @media (min-width: 768px) {
+      max-width: 620px;
+    }
+  }
+
+  &__slider-img {
+    border-radius: 16px;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__descr {
+    @media (min-width: 1440px) {
+      width: 408px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  &__id {
+    margin-bottom: 24px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--input-color);
+    border-radius: 32px;
+  }
+
+  &__property-title {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  &__property-list {
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    dt,
+    dd {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--input-color);
+    }
+
+    dt {
+      color: var(--placeholder-color);
+    }
+
+    dd {
+      text-align: right;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 12px;
+    width: 100%;
+  }
+
+  &__property-btn {
+    width: 100%;
+  }
+}
+
+.favorite:hover {
+  stroke: var(--accent-color);
+}
+
+.thumbnails {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    column-gap: 14px;
+  }
+
+  &__item {
+
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,38 @@
+.catalog {
+  padding-bottom: 20px;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__link {
+    padding: 11px 14px 13px 14px;
+    display: block;
+    color: var(--placeholder-color);
+    background-color: var(--input-color);
+    border-radius: 32px;
+    // transition-duration: var(--transition-duration);
+
+    &:hover,
+    &:focus-visible {
+      padding: 10px 13px 12px 13px;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--white-color);
+      background-color: var(--accent-color);
+    }
+  }
+}

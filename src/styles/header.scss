@@ -1,0 +1,118 @@
+.header {
+  padding: 18px 0;
+
+  &__inner {
+    padding-bottom: 16px;
+    display: grid;
+    grid-template-areas:
+      'logo action'
+      'search search';
+    gap: 17px;
+    border-bottom: 1px solid #eeeff2;
+
+    @media (min-width: 1024px) {
+      grid-template-areas: 'logo search action';
+    }
+  }
+
+  &__logo-link {
+    grid-area: logo;
+  }
+
+  &__logo-img {
+    width: 106px;
+
+    @media (min-width: 768px) {
+      width: 130px;
+    }
+  }
+
+  &__search {
+    position: relative;
+    grid-area: search;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      max-width: 408px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 512px;
+    }
+  }
+
+  &__search-input {
+    padding: 12px 45px 12px 24px;
+    width: 100%;
+    background-color: var(--input-color);
+    border: none;
+    border-radius: 32px;
+    color: var(--text-color);
+
+    &::placeholder {
+      color: var(--placeholder-color);
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+  }
+
+  &__search-btn .header__icon {
+    fill: var(--input-color);
+  }
+
+  &__action {
+    grid-area: action;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 16px;
+
+    @media (min-width: 1024px) {
+      column-gap: 24px;
+    }
+  }
+
+  &__action-favorite,
+  &__action-cart {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: 4px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+ 
+
+  &__action-text {
+    display: none;
+    color: var(--text-color);
+    transition-duration: var(--transition-duration);
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+    &__action-text:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+  } 
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--text-color);
+    fill: var(--white-color);
+  }
+
+}
